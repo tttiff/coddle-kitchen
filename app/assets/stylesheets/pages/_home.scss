@@ -1,1 +1,41 @@
 // Specific CSS for your home-page
+
+.home-banner {
+
+ background: image-url('banner.png') ;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+
+
+.home-page {
+  background-size: contain;
+}
+
+.container {
+  max-width: 80%;
+}
+.text-center {
+  text-align: center;
+
+
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+
+}
+.card {
+  flex: 0 0 32%;
+
+}
+
+.card-body {
+  margin: auto;
+  padding: 70px 0;
+}
+
