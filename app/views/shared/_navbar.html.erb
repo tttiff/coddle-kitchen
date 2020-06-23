@@ -1,13 +1,38 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-<%= image_tag "logo.png" %>    <% end %>
+<div class="nav-bar-img">
+  <div class="container">
+    <div class="topnav">
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class= "nav-bar-social">
+        <ul>
+          <li><%= link_to "", "https://www.instagram.com/tiffanyrcharles/", class: "fa fa-instagram" , target: "_blank" %></li>
+          <li><%= link_to "", "https://www.youtube.com/channel/UCKWqVDAgcdi4gAbYsaZhybA?view_as=subscriber", class: "fa fa-youtube-play" , target: "_blank" %></li>
+        </ul>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- TRADITIONAL NAV BAR -->
+<!-- ALL BELOW -->
+
+<!-- <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class= "nav-bar-logo">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag "logo.png" %>
+    <% end %>
+  </div> -->
+
+  <!-- LOGIN AND NAV BAR -->
+
+<!--  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
@@ -32,3 +57,4 @@
     </ul>
   </div>
 </div>
+ -->

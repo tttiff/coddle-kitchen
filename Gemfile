@@ -43,6 +43,20 @@ gem 'devise'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
+
+
+
+# GEMS I HAVE ADDED
+
+# BOOTSTRAP SETUP
+gem 'bootstrap', '~> 4.5.0'
+gem 'jquery-rails'
+gem 'bootstrap-social-rails'
+gem 'font-awesome-rails'
+
+
+
+
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
