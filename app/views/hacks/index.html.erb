@@ -19,6 +19,9 @@
       <tr>
         <td><%= hack.title %></td>
         <td><%= hack.description %></td>
+        <% if hack.image.attached? %>
+        <td><%= cl_image_tag hack.image.key, height: 150, width: 300, crop: :fill %></td>
+        <% end %>
         <td><%= hack.image %></td>
         <td><%= hack.youtube_url %></td>
         <td><%= hack.publish %></td>

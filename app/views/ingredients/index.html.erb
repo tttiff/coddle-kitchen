@@ -15,10 +15,10 @@
     <% @ingredients.each do |ingredient| %>
       <tr>
         <td><%= ingredient.name %></td>
-        <td>        <%= image_tag ingredient.image %>
-</td>
+        <% if ingredient.image.attached? %>
+        <td><%= cl_image_tag ingredient.image.key, height: 300, width: 400, crop: :fill %></td>
+        <% end %>
 
-        <td><%= ingredient.image %></td>
         <td><%= link_to 'Show', ingredient %></td>
         <td><%= link_to 'Edit', edit_ingredient_path(ingredient) %></td>
         <td><%= link_to 'Destroy', ingredient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -33,15 +33,4 @@
 
 
 
-      <div class= "ingredients-container">
-        <div class="ingredients-display-recipe-show">
-          <% @ingredients.each do |ing| %>
-          <div class="ingredient-avatar-card">
-          <%= image_tag "#{ing.image}" , class: "ingredient-avatar" %>
-          <%= ing.name.capitalize %>
-        <!--   (<%= ing.id %>) -->
-          </div>
-          <% end %>
-        </div>
 
-      </div>

@@ -12,4 +12,6 @@ class Ingredient < ApplicationRecord
 
   before_save { name.downcase! }
 
+# cloudinary active storage image upload
+  has_one_attached :image
 end
