@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ingredient Preservations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Days added</th>
+      <th>Initial state</th>
+      <th>Ingredient</th>
+      <th>Preservation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ingredient_preservations.each do |ingredient_preservation| %>
+      <tr>
+        <td><%= ingredient_preservation.days_added %></td>
+        <td><%= ingredient_preservation.initial_state %></td>
+        <td><%= ingredient_preservation.ingredient %></td>
+        <td><%= ingredient_preservation.preservation %></td>
+        <td><%= link_to 'Show', ingredient_preservation %></td>
+        <td><%= link_to 'Edit', edit_ingredient_preservation_path(ingredient_preservation) %></td>
+        <td><%= link_to 'Destroy', ingredient_preservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ingredient Preservation', new_ingredient_preservation_path %>

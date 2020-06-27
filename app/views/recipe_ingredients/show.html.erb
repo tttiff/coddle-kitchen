@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vital:</strong>
+  <%= @recipe_ingredient.vital %>
+</p>
+
+<p>
+  <strong>Substitute possible:</strong>
+  <%= @recipe_ingredient.substitute_possible %>
+</p>
+
+<p>
+  <strong>Recipe:</strong>
+  <%= @recipe_ingredient.recipe %>
+</p>
+
+<p>
+  <strong>Ingredient:</strong>
+  <%= @recipe_ingredient.ingredient %>
+</p>
+
+<p>
+  <strong>Measurement:</strong>
+  <%= @recipe_ingredient.measurement %>
+</p>
+
+<%= link_to 'Edit', edit_recipe_ingredient_path(@recipe_ingredient) %> |
+<%= link_to 'Back', recipe_ingredients_path %>

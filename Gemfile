@@ -56,7 +56,6 @@ gem 'font-awesome-rails'
 
 
 
-
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
