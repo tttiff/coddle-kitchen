@@ -1,0 +1,40 @@
+.container {
+  max-width: 80%;
+}
+.text-center {
+  text-align: center;
+
+
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+
+}
+.card {
+  flex: 0 0 32%;
+  // positioning in middle of card
+  padding: 70px 0;
+  text-align: center;
+  //
+
+  a {
+    text-decoration: none !important;
+
+  }
+  a:hover {
+       text-decoration: none !important;
+
+  }
+}
+
+.card-body {
+
+
+  h4 {
+    text-align: center;
+  }
+}
+
+

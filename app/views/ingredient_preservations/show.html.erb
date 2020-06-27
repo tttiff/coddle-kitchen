@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Days added:</strong>
+  <%= @ingredient_preservation.days_added %>
+</p>
+
+<p>
+  <strong>Initial state:</strong>
+  <%= @ingredient_preservation.initial_state %>
+</p>
+
+<p>
+  <strong>Ingredient:</strong>
+  <%= @ingredient_preservation.ingredient %>
+</p>
+
+<p>
+  <strong>Preservation:</strong>
+  <%= @ingredient_preservation.preservation %>
+</p>
+
+<%= link_to 'Edit', edit_ingredient_preservation_path(@ingredient_preservation) %> |
+<%= link_to 'Back', ingredient_preservations_path %>

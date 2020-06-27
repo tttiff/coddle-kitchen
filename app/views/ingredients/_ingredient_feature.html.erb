@@ -1,0 +1,24 @@
+      <div class= "ingredient-show-main-container">
+        <div class="ingredient-show-card">
+
+
+
+      <div class= "ingredients-container">
+        <div class="ingredients-display-ingredient-show">
+          <% @ingredients.each do |ing| %>
+            <% if ing.image.attached? %>
+
+          <div class="ingredient-avatar-card">
+              <%= cl_image_tag ing.image.key, class: "ingredient-avatar" %>
+              <p><%= ing.name.capitalize %></p>
+
+        <!--   (<%= ing.id %>) -->
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+
+
+      </div>
+</div>
+ </div>

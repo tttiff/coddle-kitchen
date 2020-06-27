@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Method:</strong>
+  <%= @preservation.method %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @preservation.description %>
+</p>
+
+<%= link_to 'Edit', edit_preservation_path(@preservation) %> |
+<%= link_to 'Back', preservations_path %>

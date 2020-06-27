@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Preservations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @preservations.each do |preservation| %>
+      <tr>
+        <td><%= preservation.method %></td>
+        <td><%= preservation.description %></td>
+        <td><%= link_to 'Show', preservation %></td>
+        <td><%= link_to 'Edit', edit_preservation_path(preservation) %></td>
+        <td><%= link_to 'Destroy', preservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Preservation', new_preservation_path %>

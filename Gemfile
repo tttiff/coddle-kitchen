@@ -53,7 +53,7 @@ gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
 gem 'bootstrap-social-rails'
 gem 'font-awesome-rails'
-
+gem 'cloudinary', '~> 1.12.0'
 
 
 

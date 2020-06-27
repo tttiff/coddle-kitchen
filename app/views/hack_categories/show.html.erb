@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hack_category.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hack_category.description %>
+</p>
+
+<%= link_to 'Edit', edit_hack_category_path(@hack_category) %> |
+<%= link_to 'Back', hack_categories_path %>

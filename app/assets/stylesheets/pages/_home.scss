@@ -15,27 +15,18 @@
   background-size: contain;
 }
 
-.container {
-  max-width: 80%;
+.new-on-youtube-home {
+
+  display: block;
+
+
 }
-.text-center {
+
+
+.home-container-columns {
+  margin: 0 40px;
   text-align: center;
-
-
-}
-.cards {
-  display: flex;
-  justify-content: space-between;
-  height: 200px;
-
-}
-.card {
-  flex: 0 0 32%;
-
 }
 
-.card-body {
-  margin: auto;
-  padding: 70px 0;
-}
+
 
