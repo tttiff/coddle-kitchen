@@ -6,7 +6,7 @@
       <div class= "ingredients-container">
         <div class="ingredients-display-ingredient-show">
           <% @ingredients.each do |ing| %>
-          <%= link_to ingredient_path(ing) do %>
+
             <% if ing.image.attached? %>
 
           <div class="ingredient-avatar-card">
@@ -14,7 +14,7 @@
               <p><%= ing.name.capitalize %></p>
           </div>
           <% end %>
-          <% end %>
+
           <% end %>
         </div>
 

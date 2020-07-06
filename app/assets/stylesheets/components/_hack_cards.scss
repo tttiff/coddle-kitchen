@@ -1,110 +1,110 @@
-.hack-cards {
 
-display: inline-grid;
-
-grid-template-columns: repeat(3, 1fr);
-
-grid-auto-rows: auto;
-
-grid-gap: 1rem;
-margin-bottom: 10px;
-
-}
+// HOME PAGE CARDS
+// CURRENTLY ONLY USED FOR HOME PAGE CARDS
 
 
-@media(max-width: 992px) {
+// CARD CONTAINER
+
   .hack-cards {
-    grid-template-columns: repeat(2, 1fr);
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    margin-bottom: 50px;
+    }
+
+  // DEVICE RESPONSIVE FOR CARD CONTAINER
+
+  @media(max-width: 992px) {
+    .hack-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
-}
 
-@media(max-width: 768px) {
-  .hack-cards {
-    grid-template-columns: repeat(2, 1fr);
+  @media(max-width: 768px) {
+    .hack-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
-}
+
+// CARD CONTAINER
 
 
-.hack-card {
-    position: relative;
-    // display: flex;
-    flex-direction: column;
-    // min-width: 0;
-    width: auto;
-    word-wrap: break-word;
-    // background-color: #fff;
-    background-clip: border-box;
-    // border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 2px;
 
-img {
-   object-fit: cover;
-   // width: 420px;
-}
-}
+// HACK CARD - YOUTUBE VIDEO HOLDER AND HACK CARD
 
-.fact-card {
-    position: relative;
-    // display: flex;
-    flex-direction: column;
-    // min-width: 0;
+  .hack-card {
+      position: relative;
+      // display: flex;
+      flex-direction: column;
+      // min-width: 0;
+      width: auto;
+      word-wrap: break-word;
+      // background-color: #fff;
+      background-clip: border-box;
+      // border: 1px solid rgba(0, 0, 0, 0.125);
+      border-radius: 2px;
 
-    // height: 250px;
-    word-wrap: break-word;
-    // background-color: #fff;
-    background-clip: border-box;
-    // border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 2px;
-
-
-img {
-   object-fit: cover;
-   width: 420px;
-}
-}
-
-// .circle-icon {
-//     background: white;
-//     width: 50px;
-//     height: 50px;
-//     border-radius: 50%;
-//     text-align: center;
-//     line-height: 100px;
-//     vertical-align: middle;
-//     padding: 30px;
-// }
-
-.ingredient-avatar-overlay {
-    background: white;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-
-    margin: 0px;
-    position: relative;
-    bottom: 50px;
-    display: table;
-  margin: 0 auto;
+  img {
+     object-fit: cover;
+     // width: 420px;
+    }
   }
 
 
-.hack-text {
+// FACT CARD CONTAINER - SEPARATE AS HEIGHT IS DIFFERENT - ONLY CONTAINS IMAGE
+  .fact-card {
+      position: relative;
+      flex-direction: column;
+      word-wrap: break-word;
+      background-clip: border-box;
+      border-radius: 2px;
 
-  background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  padding: 0px;
-  display: block;
+    img {
+        object-fit: cover;
+        width: 420px;
+      }
+    }
 
- h3 {
-    text-align: center;
-    position: relative;
-    bottom: 30px;
-    margin: 0;
+
+// HACK CARD INGFREDIENT AVATAR
+  .ingredient-avatar-overlay {
+      background: white;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin: 0px;
+      position: relative;
+      bottom: 50px;
+      display: table;
+      margin: 0 auto;
+    }
+
+
+// HACK CARD TEXT - HACK TITLE
+  .hack-text {
+
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     padding: 0px;
-}
+    display: block;
 
-}
+     h4 {
+        text-align: center;
+        position: relative;
+        bottom: 30px;
+        margin: 0;
+        padding: 0px;
+      }
 
+    }
+
+
+// HACK CARD - HACK CATEGORY - EXAMPLE "FREEZE" "STORAGE"
+  .hack-card-hack-category-bar {
+    background-color: #57C6C8;
+    color: white;
+  }
 

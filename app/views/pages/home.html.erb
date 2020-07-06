@@ -11,7 +11,7 @@
 
 
 
-  <h3>Food Waste Facts</h3>
+<!--   <h3>Food Waste Facts</h3> -->
 <!--   CARDS -->
   <div class="hack-cards">
 
@@ -86,7 +86,10 @@
               <%= cl_image_tag hack.ingredients.first.image.key, class: "ingredient-card-avatar" %>
           <% end %>
         </div>
-        <h3><%= hack.title.capitalize %></h3>
+        <h4><%= hack.title.capitalize %></h4>
+        <div class="hack-card-hack-category-bar">
+          <%= hack.hack_categories.first.name %>
+          </div>
       </div>
     </div>
      <!-- CARD -->
