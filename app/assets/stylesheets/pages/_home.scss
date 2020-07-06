@@ -1,8 +1,12 @@
 // Specific CSS for your home-page
 
+body {
+  padding-bottom: 50px;
+}
+
 .home-banner {
 
- background: image-url('banner.png') ;
+  background: image-url('banner.png') ;
     height: 400px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,22 +15,37 @@
 }
 
 
+// home page container with padding
 .home-page {
   background-size: contain;
+  padding: 40px;
 }
 
-.new-on-youtube-home {
+@media(max-width: 992px) {
+  .home-page {
+    background-size: contain;
+    padding: 10px;
+  }
+}
 
-  display: block;
-
-
+@media(max-width: 768px) {
+  .home-page {
+    background-size: contain;
+    padding: 10px;
+  }
 }
 
 
-.home-container-columns {
-  margin: 0 40px;
+
+
+
+.home-page-container {
   text-align: center;
+  padding: 20px 0px;
 }
 
 
-
+.row.cards-container {
+  display: inline-flex;
+  margin: 0 10px;
+}

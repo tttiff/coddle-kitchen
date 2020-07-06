@@ -19,6 +19,7 @@ class IngredientsController < ApplicationController
 
   # GET /ingredients/1/edit
   def edit
+
   end
 
   # POST /ingredients
@@ -40,6 +41,7 @@ class IngredientsController < ApplicationController
   # PATCH/PUT /ingredients/1
   # PATCH/PUT /ingredients/1.json
   def update
+
     respond_to do |format|
       if @ingredient.update(ingredient_params)
         format.html { redirect_to @ingredient, notice: 'Ingredient was successfully updated.' }
@@ -69,6 +71,6 @@ class IngredientsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def ingredient_params
-      params.require(:ingredient).permit(:name, :image)
+      params.require(:ingredient).permit(:name, :image, hack_category_ids: [])
     end
 end

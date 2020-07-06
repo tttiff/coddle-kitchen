@@ -1,2 +1,107 @@
 
+<!-- ingredients banner/bar stretches across the whole page -->
+<%= render partial: "ingredients/ingredient_feature" %>
+
+
+<!-- HOME PAGE CONTAINER -->
+
+<div class="home-page-container">
+
+<!-- FOOD WASTE FACT CARDS -->
+
+
+
+  <h3>Food Waste Facts</h3>
+<!--   CARDS -->
+  <div class="hack-cards">
+
+
+    <!-- CARD -->
+    <div class="fact-card">
+      <%= image_tag("waste_fact_4.jpg") %>
+
+    </div>
+     <!-- CARD -->
+
+    <!-- CARD -->
+    <div class="fact-card">
+      <%= image_tag("waste_fact_5.jpg") %>
+
+    </div>
+     <!-- CARD -->
+
+
+<!-- CARD -->
+    <div class="fact-card">
+      <%= image_tag("waste_fact_6.jpg") %>
+
+    </div>
+     <!-- CARD -->
+
+  </div>
+  <!--   CARDS -->
+
+<!-- FOOD WASTE FACT CARDS -->
+
+
+
+
+
+
+
+<!-- YOUTUBE UPLOAD CARDS -->
+
+  <h3>New Youtube Uploads</h3>
+
+   <!--   CARDS -->
+  <div class="hack-cards">
+    <% @hacks.each do |hack| %>
+    <!-- CARD -->
+    <div class="hack-card">
+
+        <iframe width="420" height="250" src="https://www.youtube.com/embed/<%= hack.youtube_url %>" frameborder="0" allowfullscreen class="" ></iframe>
+
+    </div>
+    <!-- CARD -->
+    <% end %>
+  </div>
+   <!--   CARDS -->
+
+<!-- YOUTUBE UPLOAD CARDS -->
+
+
+<!-- HACK CARDS -->
+
+  <h3>Popular hacks</h3>
+<!--   CARDS -->
+  <div class="hack-cards">
+    <% @hacks.each do |hack| %>
+
+    <!-- CARD -->
+    <div class="hack-card">
+      <%= cl_image_tag hack.image.key, height: 250, width: 420, crop: :fill, class: ""%>
+      <div class="hack-text">
+        <div class="ingredient-avatar-overlay ingredient-avatar-card">
+          <% if hack.ingredients.present? %>
+              <%= cl_image_tag hack.ingredients.first.image.key, class: "ingredient-card-avatar" %>
+          <% end %>
+        </div>
+        <h3><%= hack.title.capitalize %></h3>
+      </div>
+    </div>
+     <!-- CARD -->
+
+    <% end %>
+  </div>
+  <!--   CARDS -->
+
+  <!-- HACK CARDS -->
+
+
+
+
+
+</div>
+
+
 

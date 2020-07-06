@@ -44,6 +44,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    ancestry (2.2.2)
+      activerecord (>= 3.0.0)
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
@@ -102,8 +104,6 @@ GEM
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.13.1)
-    font-awesome-rails (4.7.0.5)
-      railties (>= 3.2, < 6.1)
     font-awesome-sass (5.13.0)
       sassc (>= 1.11)
     globalid (0.4.2)
@@ -274,6 +274,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ancestry (~> 2.1)
   autoprefixer-rails
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.5.0)
@@ -285,7 +286,6 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   dotenv-rails
-  font-awesome-rails
   font-awesome-sass
   jbuilder (~> 2.5)
   jquery-rails

@@ -5,5 +5,6 @@ class PagesController < ApplicationController
 
     @ingredients =  Ingredient.all
     @hacks = Hack.all
+
   end
 end

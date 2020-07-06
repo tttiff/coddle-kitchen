@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  resources :ingredient_hacks
   resources :hacks
-  resources :ingredient_preservations
-  resources :preservations
   resources :hack_categories
   resources :recipe_ingredients
   resources :measurements

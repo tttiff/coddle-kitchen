@@ -25,6 +25,11 @@ class HacksController < ApplicationController
   # POST /hacks.json
   def create
     @hack = Hack.new(hack_params)
+    ing = Ingredient.find(hack_params[:ingredient_ids].reject!(&:blank?))
+    hack_cat = HackCategory.find(hack_params[:hack_category_ids].reject!(&:blank?))
+
+    IngredientHack.create(hack: @hack, ingredient: @ing, hack_category: hack_cat)
+
 
     respond_to do |format|
       if @hack.save
@@ -40,8 +45,22 @@ class HacksController < ApplicationController
   # PATCH/PUT /hacks/1
   # PATCH/PUT /hacks/1.json
   def update
+    hack_params = params[:hack]
+
+    # if params[:hack][:ingredients].present?
+    #   ing = Ingredient.find(params[:hack][:ingredients])
+    #     @hack.ingredient_hack_ids << ing
+    #     @hack.save!
+
+
+    # end
+  # @ingredient = Ingredient.find(hack_params[:ingredient_ids].reject(&:blank?).pop)
+  # @hack_category = HackCategory.find(hack_params[:hack_category_ids].reject(&:blank?).pop)
+  # IngredientHack.create(ingredient: @ingredient, hack_category: @hack_category, hack: @hack)
+
+
     respond_to do |format|
-      if @hack.update(hack_params)
+      if @hack.update(params)
         format.html { redirect_to @hack, notice: 'Hack was successfully updated.' }
         format.json { render :show, status: :ok, location: @hack }
       else
@@ -69,6 +88,6 @@ class HacksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def hack_params
-      params.require(:hack).permit(:title, :description, :image, :youtube_url, :publish)
+      params.require(:hack).permit(:title, :description, :image, :youtube_url, :publish, hack_category_ids: [], ingredient_ids: [])
     end
 end

@@ -1,14 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @ingredient.name %>
-</p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @ingredient.image %>
-</p>
+      <div class= "ingredients-container">
+        <div class="ingredients-display-ingredient-show">
+
+
+          <div class="ingredient-avatar-card">
+            <% if @ingredient.image.attached? %>
+              <%= cl_image_tag @ingredient.image.key, class: "ingredient-avatar" %>
+              <% end %>
+              <p><%= @ingredient.name.capitalize %></p>
+
+              <p>Hack Categories</p>
+              <ul>
+              <% @ingredient.hack_categories.each do |hack_category| %>
+                <li><%= hack_category.name %></li>
+
+              <% end %>
+              </ul>
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
 
 
 

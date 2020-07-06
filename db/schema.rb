@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_27_140801) do
+ActiveRecord::Schema.define(version: 2020_06_30_154111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 2020_06_27_140801) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "ancestry"
+    t.index ["ancestry"], name: "index_hack_categories_on_ancestry"
   end
 
   create_table "hacks", force: :cascade do |t|
@@ -54,25 +56,14 @@ ActiveRecord::Schema.define(version: 2020_06_27_140801) do
   end
 
   create_table "ingredient_hacks", force: :cascade do |t|
+    t.bigint "ingredient_id"
     t.bigint "hack_id"
-    t.bigint "ingredient_preservation_id"
     t.bigint "hack_category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["hack_category_id"], name: "index_ingredient_hacks_on_hack_category_id"
     t.index ["hack_id"], name: "index_ingredient_hacks_on_hack_id"
-    t.index ["ingredient_preservation_id"], name: "index_ingredient_hacks_on_ingredient_preservation_id"
-  end
-
-  create_table "ingredient_preservations", force: :cascade do |t|
-    t.integer "days_added", default: 0, null: false
-    t.boolean "initial_state", default: false, null: false
-    t.bigint "ingredient_id"
-    t.bigint "preservation_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["ingredient_id"], name: "index_ingredient_preservations_on_ingredient_id"
-    t.index ["preservation_id"], name: "index_ingredient_preservations_on_preservation_id"
+    t.index ["ingredient_id"], name: "index_ingredient_hacks_on_ingredient_id"
   end
 
   create_table "ingredients", force: :cascade do |t|
@@ -85,13 +76,6 @@ ActiveRecord::Schema.define(version: 2020_06_27_140801) do
   create_table "measurements", force: :cascade do |t|
     t.integer "quantity"
     t.string "unit"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "preservations", force: :cascade do |t|
-    t.string "method", null: false
-    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -135,9 +119,7 @@ ActiveRecord::Schema.define(version: 2020_06_27_140801) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "ingredient_hacks", "hack_categories"
   add_foreign_key "ingredient_hacks", "hacks"
-  add_foreign_key "ingredient_hacks", "ingredient_preservations"
-  add_foreign_key "ingredient_preservations", "ingredients"
-  add_foreign_key "ingredient_preservations", "preservations"
+  add_foreign_key "ingredient_hacks", "ingredients"
   add_foreign_key "recipe_ingredients", "ingredients"
   add_foreign_key "recipe_ingredients", "measurements"
   add_foreign_key "recipe_ingredients", "recipes"

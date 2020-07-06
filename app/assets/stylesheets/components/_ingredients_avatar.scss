@@ -1,0 +1,37 @@
+.ingredient-avatar {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px lavender;
+  object-fit: cover;
+
+  p {
+    padding: 10px;
+  }
+
+}
+
+
+  img.ingredient-avatar {
+    object-fit: cover;
+  }
+
+  .ingredient-avatar-card {
+        padding: 10px 10px 0px 10px;
+
+    :hover   {
+      opacity: 0.6;
+     }
+
+  }
+
+
+.ingredient-card-avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px lavender;
+  object-fit: cover;
+
+
+}

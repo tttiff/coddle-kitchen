@@ -1,5 +1,20 @@
 
+<div class="hack-form-container">
 <%= simple_form_for(@hack) do |f| %>
+
+
+
+  <div>
+    <h2>Ingredients</h2>
+    <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name, { include_blank: '0' } %>
+  </div>
+
+  <div>
+    <h2>Hack Categories</h2>
+      <%= f.collection_check_boxes :hack_category_ids, HackCategory.all, :id, :name, { include_blank: '0' }  %>
+  </div>
+
+
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
@@ -15,3 +30,4 @@
     <%= f.button :submit %>
   </div>
 <% end %>
+</div>

@@ -1,6 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Ingredients</h1>
+
+      <div class= "ingredients-container">
+        <div class="ingredients-display-ingredient-show">
+          <% @ingredients.each do |ing| %>
+
+          <%= link_to ingredient_path(ing) do %>
+
+          <div class="ingredient-avatar-card">
+            <% if ing.image.attached? %>
+              <%= cl_image_tag ing.image.key, class: "ingredient-avatar" %>
+              <% end %>
+              <p><%= ing.name.capitalize %></p>
+
+        <!--   (<%= ing.id %>) -->
+          </div>
+
+          <% end %>
+          <% end %>
+        </div>
+
+
+      </div>
+
+
+<!-- <h1>Ingredients</h1>
 
 <table>
   <thead>
@@ -27,7 +51,7 @@
   </tbody>
 </table>
 
-<br>
+<br> -->
 
 <%= link_to 'New Ingredient', new_ingredient_path %>
 

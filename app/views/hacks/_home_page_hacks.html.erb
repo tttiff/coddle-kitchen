@@ -1,14 +1,17 @@
 
+<div>
+<h1>New Youtube Uploads</h1>
+<div class="row new-on-youtube-home">
 
 
-<div class="new-on-youtube-home">
-  <% @hacks.each do |hack| %>
-  <div>
-    <iframe width="490" height="275" src="<%= hack.youtube_url %>" frameborder="0" allowfullscreen ></iframe>
+
+    <% @hacks.each do |hack| %>
+    <div>
+      <iframe width="350"  src="<%= hack.youtube_url %>" frameborder="0" allowfullscreen class="home-page-youtube-videos" ></iframe>
+    </div>
+    <% end %>
+
   </div>
-  <% end %>
+
 </div>
-
-
-
 
