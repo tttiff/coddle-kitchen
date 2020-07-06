@@ -5,3 +5,13 @@
 @import "ingredients_index";
 @import "ingredients_form";
 @import "hack_form";
+
+
+
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
