@@ -54,9 +54,9 @@ class HacksController < ApplicationController
 
 
     # end
-  # @ingredient = Ingredient.find(hack_params[:ingredient_ids].reject(&:blank?).pop)
-  # @hack_category = HackCategory.find(hack_params[:hack_category_ids].reject(&:blank?).pop)
-  # IngredientHack.create(ingredient: @ingredient, hack_category: @hack_category, hack: @hack)
+  @ingredient = Ingredient.find(hack_params[:ingredient_ids].reject(&:blank?).pop)
+  @hack_category = HackCategory.find(hack_params[:hack_category_ids].reject(&:blank?).pop)
+  IngredientHack.create(ingredient: @ingredient, hack_category: @hack_category, hack: @hack)
 
 
     respond_to do |format|
@@ -88,6 +88,6 @@ class HacksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def hack_params
-      params.require(:hack).permit(:title, :description, :image, :youtube_url, :publish, hack_category_ids: [], ingredient_ids: [])
+      params.require(:hack).permit(:title, :description, :image, :youtube_url, :publish, ingredient_ids: [],hack_category_ids: [])
     end
 end
