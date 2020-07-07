@@ -11,12 +11,20 @@
 
 
 <p>Hack Categories:</p>
-<%= f.collection_check_boxes(:hack_category_ids, HackCategory.all, :id, :name) do |b| %>
-    <div> <%= b.check_box %><%= b.label { b.text } %></div>
-    <% end %>
+
+
+ <%= f.collection_check_boxes :hack_category_ids, HackCategory.all, :id, :name %>
 
 
 
+
+  <%= f.fields_for :hacks, ingredient.hacks.build do |hacks_fields| %>
+    <%= hacks_fields.input :title %>
+    <%= hacks_fields.input :description %>
+    <%= hacks_fields.input :image, as: :file %>
+    <%= hacks_fields.input :youtube_url %>
+    <%= hacks_fields.input :publish %>
+  <% end %>
 
   <div class="form-actions">
     <%= f.button :submit %>

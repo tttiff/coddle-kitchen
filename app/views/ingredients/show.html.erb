@@ -13,9 +13,15 @@
 
               <p>Hack Categories</p>
               <ul>
-              <% @ingredient.hack_categories.each do |hack_category| %>
+              <% @ingredient.hack_categories.uniq.each do |hack_category| %>
                 <li><%= hack_category.name %></li>
+              <% end %>
+              </ul>
 
+              <p>Hack Categories</p>
+              <ul>
+              <% @ingredient.hacks.each do |hack| %>
+                <li><%= hack.title %></li>
               <% end %>
               </ul>
           </div>
